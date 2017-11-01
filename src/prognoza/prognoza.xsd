@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="prognoza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="lokacija">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="drzava">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="iso">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:length value="2" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="grad" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="datum">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Ponedjeljak"/>
+                    <xs:enumeration value="Utorak"/>
+                    <xs:enumeration value="Srijeda"/>
+                    <xs:enumeration value="Četvrtak"/>
+                    <xs:enumeration value="Petak"/>
+                    <xs:enumeration value="Subota"/>
+                    <xs:enumeration value="Nedjelja"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vrijeme" type="xs:time" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="temperatura">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:integer">
+                <xs:attribute name="jedinica" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="opis" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="dohvacena" type="xs:dateTime" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 

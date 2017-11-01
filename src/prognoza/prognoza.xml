@@ -1,0 +1,12 @@
+<prognoza dohvacena="2006-10-02T12:45:23">
+  <lokacija>
+    <drzava iso="hr">Hrvatska</drzava>
+    <grad>Zagreb</grad>
+  </lokacija>
+  <datum>
+    <dan>Ponedjeljak</dan>
+    <vrijeme>13:00:00</vrijeme>
+  </datum>
+  <temperatura jedinica="C">9</temperatura>
+  <opis>Djelomično oblačno, sa mogućim padalinama.</opis>
+</prognoza>
