@@ -26,7 +26,7 @@ public class MojePrognoze {
 	
 	void marshal() {
 		try {
-			JAXBContext jc = JAXBContext.newInstance("prognoze");
+			JJAXBContext jc = JAXBContext.newInstance(ObjectFactory.class.getPackage().getName(), ObjectFactory.class.getClassLoader());
 			Marshaller m = jc.createMarshaller();
 			m.marshal(this.prognoze, System.out );
 		} catch (JAXBException e) {
